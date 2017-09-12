@@ -1,0 +1,19 @@
+doctype html
+
+html
+    head
+        title Add User
+    body
+        h1 Form To Create New User
+        a(href='/')
+            button Home
+        a(href='/users')
+            button User Listings
+        form(action='/createuser', method='post')
+            label(for='name') Name
+            input#name(type='text', name='name', required='true', value=user.name)
+            label(for='email') Email
+            input#email(type='email', name='email', required='true', value=user.email)
+            label(for='age') Age
+            input#age(type='number', name='age', required='true', value=user.age)
+            button Add
